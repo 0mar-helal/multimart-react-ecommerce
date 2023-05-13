@@ -5,6 +5,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import ShopList from "../components/ShopList";
 import { products } from "../utils/products";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
     const [listSelected,setListSelected] =useState("desc");
@@ -19,6 +20,10 @@ const ProductDetails = () => {
     const handleQuantityChange = (event) => {
         setQuantity(parseInt(event.target.value));
     };
+    const handelAdd =(selectedProduct,quantity)=> {
+        addToCart(selectedProduct,quantity);
+        toast.success("Product has been added to cart!");
+    }
     useEffect(()=> {
         window.scrollTo(0,0);
         setRelatedProducts(products.filter(item => item.category === selectedProduct?.category));
@@ -50,7 +55,7 @@ const ProductDetails = () => {
                             </div>
                             <p>{selectedProduct?.shortDesc}</p>
                             <input className="qty-input" type="number" placeholder="Qty" value={quantity} onChange={handleQuantityChange} />
-                            <button className="add" onClick={() => addToCart(selectedProduct,quantity)}>Add To Cart</button>
+                            <button className="add" onClick={() => handelAdd(selectedProduct,quantity)}>Add To Cart</button>
                         </Col>
                     </Row>
                 </Container>

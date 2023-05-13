@@ -3,6 +3,7 @@ import { Col } from "react-bootstrap";
 import "./product.css"
 import { useNavigate } from "react-router-dom";
 import { DataContainer } from "../../App";
+import { toast } from "react-toastify";
 
 const Product = ({title,productItem,addToCart}) => {
     const {setSelectedProduct} =useContext(DataContainer);
@@ -15,6 +16,10 @@ const Product = ({title,productItem,addToCart}) => {
         setSelectedProduct(productItem);
         localStorage.setItem(`selectedProduct-${productItem.id}`,JSON.stringify(productItem));
         router(`/shop/${productItem.id}`);
+    }
+    const handelAdd =(productItem)=> {
+        addToCart(productItem);
+        toast.success("Product has been added to cart!");
     }
     return (
     <Col md={3} sm={5} xs={10} className="product mtop">
@@ -37,7 +42,7 @@ const Product = ({title,productItem,addToCart}) => {
             </div>
         <div className="price">
             <h4>${productItem.price}</h4>
-            <button className="add" onClick={() => addToCart(productItem)}>
+            <button className="add" onClick={() => handelAdd(productItem)}>
                 <ion-icon name="add"></ion-icon>
             </button>
         </div>

@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export const DataContainer = createContext();
 function App() {
   const [CartItem, setCartItem] = useState([])
@@ -42,6 +44,17 @@ function App() {
   return (
     <DataContainer.Provider value={{CartItem,setCartItem,addToCart,decreaseQty,deleteProduct,selectedProduct,setSelectedProduct}}>
       <Router>
+      <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"
+      />
         <NavBar/>
         <Routes>
           <Route path='/' element={<Home/>}/>
