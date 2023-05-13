@@ -1,4 +1,4 @@
-import { Fragment, useContext } from "react"
+import { Fragment, useContext, useEffect } from "react"
 import Wrapper from "../components/wrapper/Wrapper"
 import Section from "../components/Section"
 import {products ,discoutProducts } from "../utils/products"
@@ -9,6 +9,9 @@ const Home = () => {
   const {addToCart} =useContext(DataContainer);
   const newArrivalData = products.filter(item => item.category ==="mobile" || item.category ==="wireless");
   const bestSales = products.filter(item => item.category ==="sofa");
+  useEffect(()=> {
+    window.scrollTo(0,0);
+  },[])
   return (
     <Fragment>
       <SliderHome/>

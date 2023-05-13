@@ -6,6 +6,7 @@ const Cart = () => {
   const { CartItem, setCartItem, addToCart, decreaseQty, deleteProduct} =useContext(DataContainer);
   const totalPrice = CartItem.reduce((price, item) => price + item.qty * item.price, 0)
   useEffect(()=> {
+    window.scrollTo(0,0);
     if(CartItem.length ===0) {
       const storedCart = localStorage.getItem("cartItem");
       setCartItem(JSON.parse(storedCart));

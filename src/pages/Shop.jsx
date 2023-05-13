@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import FilterSelect from "../components/FilterSelect";
 import SearchBar from "../components/SeachBar/SearchBar";
-import { Fragment, useContext, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { products } from "../utils/products";
 import ShopList from "../components/ShopList";
 import Banner from "../components/Banner/Banner";
@@ -10,6 +10,9 @@ import { DataContainer } from "../App";
 const Shop = () => {
     const {addToCart} =useContext(DataContainer);
     const [filterList,setFilterList] = useState(products.filter(item => item.category ==="sofa"));
+    useEffect(()=> {
+        window.scrollTo(0,0);
+    },[])
     return ( 
         <Fragment>
             <Banner title="product"/>

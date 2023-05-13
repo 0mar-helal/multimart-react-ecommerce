@@ -20,6 +20,7 @@ const ProductDetails = () => {
         setQuantity(parseInt(event.target.value));
     };
     useEffect(()=> {
+        window.scrollTo(0,0);
         setRelatedProducts(products.filter(item => item.category === selectedProduct?.category));
     },[selectedProduct])
     return ( 
