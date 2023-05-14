@@ -26,7 +26,7 @@ const ProductDetails = () => {
     }
     useEffect(()=> {
         window.scrollTo(0,0);
-        setRelatedProducts(products.filter(item => item.category === selectedProduct?.category));
+        setRelatedProducts(products.filter(item => item.category === selectedProduct?.category && item.id !== selectedProduct?.id));
     },[selectedProduct])
     return ( 
         <Fragment>
@@ -35,7 +35,7 @@ const ProductDetails = () => {
                 <Container>
                     <Row className="justify-content-center">
                         <Col md={6}>
-                            <img src={selectedProduct?.imgUrl} alt=""/>
+                            <img loading="lazy" src={selectedProduct?.imgUrl} alt=""/>
                         </Col>
                         <Col md={6}>
                             <h2>{selectedProduct?.productName}</h2>
@@ -55,7 +55,7 @@ const ProductDetails = () => {
                             </div>
                             <p>{selectedProduct?.shortDesc}</p>
                             <input className="qty-input" type="number" placeholder="Qty" value={quantity} onChange={handleQuantityChange} />
-                            <button className="add" onClick={() => handelAdd(selectedProduct,quantity)}>Add To Cart</button>
+                            <button aria-label="Add" type="submit" className="add" onClick={() => handelAdd(selectedProduct,quantity)}>Add To Cart</button>
                         </Col>
                     </Row>
                 </Container>

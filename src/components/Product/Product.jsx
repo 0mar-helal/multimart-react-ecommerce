@@ -24,7 +24,7 @@ const Product = ({title,productItem,addToCart}) => {
     return (
     <Col md={3} sm={5} xs={10} className="product mtop">
         {title ==="Big Discount"? <span className="discount">{productItem.discount}% Off</span>:null}
-        <img onClick={()=>handelClick()} src={productItem.imgUrl} alt=""/>
+        <img loading="lazy" onClick={()=>handelClick()} src={productItem.imgUrl} alt=""/>
         <div className="product-like">
             <label>{count}</label> <br />
             <ion-icon name="heart-outline" onClick={increment}></ion-icon>
@@ -42,7 +42,7 @@ const Product = ({title,productItem,addToCart}) => {
             </div>
         <div className="price">
             <h4>${productItem.price}</h4>
-            <button className="add" onClick={() => handelAdd(productItem)}>
+            <button aria-label="Add" type="submit" className="add" onClick={() => handelAdd(productItem)}>
                 <ion-icon name="add"></ion-icon>
             </button>
         </div>
