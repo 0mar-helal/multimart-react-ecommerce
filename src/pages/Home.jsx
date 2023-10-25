@@ -1,26 +1,33 @@
-import { Fragment, useContext, useEffect } from "react"
-import Wrapper from "../components/wrapper/Wrapper"
-import Section from "../components/Section"
-import {products ,discoutProducts } from "../utils/products"
-import { DataContainer } from "../App"
-import SliderHome from "../components/Slider"
+import { Fragment } from "react";
+import Wrapper from "../components/wrapper/Wrapper";
+import Section from "../components/Section";
+import { products, discoutProducts } from "../utils/products";
+import SliderHome from "../components/Slider";
+import useWindowScrollToTop from "../hooks/useWindowScrollToTop";
 
 const Home = () => {
-  const {addToCart} =useContext(DataContainer);
-  const newArrivalData = products.filter(item => item.category ==="mobile" || item.category ==="wireless");
-  const bestSales = products.filter(item => item.category ==="sofa");
-  useEffect(()=> {
-    window.scrollTo(0,0);
-  },[])
+  const newArrivalData = products.filter(
+    (item) => item.category === "mobile" || item.category === "wireless"
+  );
+  const bestSales = products.filter((item) => item.category === "sofa");
+  useWindowScrollToTop();
   return (
     <Fragment>
-      <SliderHome/>
+      <SliderHome />
       <Wrapper />
-      <Section title="Big Discount" bgColor="#f6f9fc" productItems={discoutProducts} addToCart={addToCart}/>
-      <Section title="New Arrivals" bgColor="white" productItems={newArrivalData} addToCart={addToCart}/>
-      <Section title="Best Sales" bgColor="#f6f9fc" productItems={bestSales} addToCart={addToCart}/>
+      <Section
+        title="Big Discount"
+        bgColor="#f6f9fc"
+        productItems={discoutProducts}
+      />
+      <Section
+        title="New Arrivals"
+        bgColor="white"
+        productItems={newArrivalData}
+      />
+      <Section title="Best Sales" bgColor="#f6f9fc" productItems={bestSales} />
     </Fragment>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

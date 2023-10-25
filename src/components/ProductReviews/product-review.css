@@ -1,0 +1,29 @@
+.product-reviews ul {
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-reviews li {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.product-reviews .rates {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.product-reviews .rates .rate-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.product-reviews .rates .rate-comment span:nth-of-type(2) {
+  color: #ffcd4e;
+  font-weight: 500;
+}

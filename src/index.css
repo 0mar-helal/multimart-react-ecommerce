@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
 
 * {
   padding: 0;
@@ -13,17 +13,18 @@ html {
 body {
   background-color: #ffffff;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-body, html {
+body,
+html {
   overflow-x: hidden !important;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -86,7 +87,7 @@ button {
   flex-wrap: wrap-reverse !important;
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .filter-bar .row {
     gap: 20px;
   }
@@ -95,98 +96,6 @@ button {
 .not-found {
   margin: 40px auto 20px;
   width: fit-content;
-}
-
-/*   ---Product Details---   */
-
-.product-page img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-@media (max-width:767px) {
-  .product-page .row {
-    gap: 30px;
-  }
-}
-
-.product-page .rate {
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-  gap: 40px;
-}
-
-.product-page .rate .stars i {
-  font-size: 12px;
-  color: #ffcd4e;
-  margin: 5px 5px 5px 0;
-}
-
-.product-page .info {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-.product-page .info .price {
-  font-size: 25px;
-  font-weight: 500;
-}
-
-.product-page p {
-  font-size: 14px;
-  margin: 20px 0;
-}
-
-.product-page .qty-input {
-  width: 80px;
-  height: 20px;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 15px;
-  margin: 20px 0;
-  color: black;
-  font-size: 15px;
-}
-
-.product-page button.add {
-  padding: 10px 15px;
-  background-color: #0f3460;
-  color: white;
-  font-size: 17px;
-  border-radius: 7px;
-}
-
-.product-reviews ul {
-  padding: 0;
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.product-reviews li {
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.product-reviews .rates {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.product-reviews .rates .rate-comment {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.product-reviews .rates .rate-comment span:nth-of-type(2) {
-  color: #ffcd4e;
-  font-weight: 500;
 }
 
 /*   ---Cart Page---   */
@@ -223,8 +132,8 @@ button {
   object-fit: contain;
 }
 
-@media (max-width:767px) {
-  .cart-items .container>.row {
+@media (max-width: 767px) {
+  .cart-items .container > .row {
     flex-wrap: wrap-reverse !important;
   }
 }
@@ -327,7 +236,7 @@ button.delete ion-icon {
   font-size: 30px;
 }
 
-@media (max-width:575px) {
+@media (max-width: 575px) {
   .cart-content .cart-details h3 {
     margin: 10px auto;
   }

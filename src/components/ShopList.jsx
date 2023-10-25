@@ -1,25 +1,24 @@
 import { Row } from "react-bootstrap";
-import { useEffect } from "react";
-import Product from "./Product/Product";
+import { memo, useEffect } from "react";
+import ProductCard from "./ProductCard/ProductCard";
 
-const ShopList = ({productItems,addToCart}) => {
-    useEffect(()=> {
-    },[productItems])
-    if(productItems.length ===0) {
+const ShopList = ({ productItems }) => {
+  useEffect(() => {}, [productItems]);
+  if (productItems.length === 0) {
+    return <h1 className="not-found">Product Not Found !!</h1>;
+  }
+  return (
+    <Row className="justify-content-center">
+      {productItems.map((productItem) => {
         return (
-            <h1 className="not-found">Product Not Found !!</h1>
+          <ProductCard
+            key={productItem.id}
+            title={null}
+            productItem={productItem}
+          />
         );
-    }
-    else {
-        return (
-            <Row className="justify-content-center">
-                {productItems.map((productItem) => {
-                return (
-                    <Product key={productItem.id} title={null} productItem={productItem} addToCart={addToCart}/>
-                )
-                })}
-            </Row>
-        );
-    }
-}
-export default ShopList;
+      })}
+    </Row>
+  );
+};
+export default memo(ShopList);
