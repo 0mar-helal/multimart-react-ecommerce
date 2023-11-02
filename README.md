@@ -17,7 +17,7 @@ https://multimart-ecommerce.onrender.com
 - react.js (create-react-app)
 - react-dom-router
 - react-bootstrap
-- state management using Context API
+- state management using Redux Toolkit
 
 ## How can you clone and tweak this project?
 
