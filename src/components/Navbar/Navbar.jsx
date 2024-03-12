@@ -71,7 +71,7 @@ const NavBar = () => {
             </Nav.Item>
 
             <Nav.Item>
-              <Link aria-label="Go to Cart Page" className="navbar-link" to="/Customer Care" onClick={() => setExpand(false)}>
+              <Link aria-label="Go to Cart Page" className="navbar-link" to="/customer-care" onClick={() => setExpand(false)}>
                 <span className="nav-link-info">Customer Care</span>
               </Link>
             </Nav.Item>

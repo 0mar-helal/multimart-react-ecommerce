@@ -17,6 +17,7 @@
 .navbar-container {
   display: flex;
   justify-content: space-between !important;
+  
 }
 
 @media (min-width: 767px) {
