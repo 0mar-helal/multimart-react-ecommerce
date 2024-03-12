@@ -1,0 +1,209 @@
+.costumer-care-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f6f9fc;
+  padding: 50px;
+}
+
+.costumer-title {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.costumer-title h1 {
+  color: #0f3460;
+  font-size: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.costumer-title h4 {
+  color: rgb(159, 155, 155);
+  font-size: 20px;
+}
+
+.costumer-card.delivery {
+  background-color: #d6e5fb;
+}
+
+.costumer-card.payment {
+    background-color: #ceebe9;
+}
+
+.costumer-card.email {
+    background-color: #e2f2b2;
+}
+
+
+.costumer-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+}
+
+.costumer-icons {
+  margin-right: 10px;
+}
+
+.costumer-icons svg {
+  font-size: 50px;
+  color: rgb(162, 159, 159);
+}
+
+.costumer-card h4 {
+  font-size: 18px;
+  margin: 0;
+  color: black;
+  z-index: 2;
+}
+
+.costumer-care-text {
+  text-align: center;
+  max-width: 430px;
+  padding: 20px;
+
+  margin: 0 auto;
+}
+
+.costumer-care-text h3 {
+  text-align: start;
+  font-size: 15px;
+  color: rgb(79, 77, 77);
+}
+
+.costumer-care-text P {
+  color: grey;
+  font-size: 18px;
+  text-align: justify;
+  max-width: 430px;
+  padding: 0;
+  margin: 0 auto;
+  letter-spacing: normal;
+}
+
+.costumer-care-text p::first-letter {
+  font-size: 150%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.costumer-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.costumer-image-container {
+  display: flex;
+}
+
+.costumer-image-container img {
+  width: 120px;
+  height: 120px;
+}
+
+.title {
+  background-color: #0f3460;
+  color: white;
+  padding: 10px;
+}
+
+.title p {
+  margin: 0;
+}
+
+.title h5,
+.title h6 {
+  margin: 5px 0;
+}
+
+.title h5 {
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.title h6 {
+  color: #51b3d7;
+}
+
+.title p {
+  color: rgb(140, 195, 140);
+  font-weight: bolder;
+}
+
+.title small {
+  font-size: 6px;
+}
+
+@media screen and (max-width: 767px) {
+  .costumer-title h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .costumer-title h4 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .costumer-card {
+    margin: 5px;
+  }
+
+  .costumer-card h4 {
+    font-size: 15px;
+  }
+
+  .costumer-care-text p {
+    font-size: 12px;
+  }
+
+  .costumer-care-text h2 {
+    font-size: 15px;
+  }
+
+  .costumer-care-text h3 {
+    font-size: 9px;
+  }
+
+  .costumer-care-container .costumer-card h4 {
+    font-size: 14px;
+  }
+
+  .title {
+    width: 240px;
+  }
+
+  .title p,
+  .title h5,
+  .title h6 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 901px) {
+  .costumer-card h4 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    .costumer-title-container,
+    .costumer-image-container {
+      width: 240px;
+      margin: auto;
+    }
+  }
+
+
+@media screen and (min-width: 1281px) {
+    .costumer-title-container {
+        
+        width: 240px;
+        margin: auto;
+      }
+  }
