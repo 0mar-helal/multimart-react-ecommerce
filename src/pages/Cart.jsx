@@ -1,11 +1,13 @@
 import { useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
   decreaseQty,
   deleteProduct,
 } from "../app/features/cart/cartSlice";
+import { Link } from "react-router-dom";
+
 
 const Cart = () => {
   const { cartList } = useSelector((state) => state.cart);
@@ -83,8 +85,18 @@ const Cart = () => {
                 <h4>Total Price :</h4>
                 <h3>${totalPrice}.00</h3>
               </div>
+
             </div>
+            
+            
+
+            {cartList.length > 0 && (
+              <Link to="/checkout-page">
+                <Button style={{marginBottom: '10px'}}  variant="dark">Go To Checkout</Button>
+              </Link>
+            )}
           </Col>
+          
         </Row>
       </Container>
     </section>
